@@ -15,6 +15,9 @@ class Video:
         # in case the caller changes the 'video_tags' they passed to us
         self._tags = tuple(video_tags)
 
+        # Set the flag to default to blank, since changing the initial database is not allowed
+        self.flag = ''
+
     @property
     def title(self) -> str:
         """Returns the title of a video."""
